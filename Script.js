@@ -99,20 +99,7 @@ document.querySelectorAll('input').forEach(input => {
         hideError(this);
     });
 });
-// function setErrorFor(input, message) {
-//     const formControl = input.parentElement; // Get the parent element of the input
-//     const errorDiv = formControl.querySelector('.error-message'); // Find the error message div
-//     // Add error message to the error div
-//     errorDiv.innerText = message;
-//     // Add error class to the parent element
-//     formControl.classList.add('error');
-// }
-// function setSuccessFor(input) {
-//     const formControl = input.parentElement; // Get the parent element of the input
-//     const successDiv = formControl.querySelector('.error-message'); // Find the success message div
-//     successDiv.innerText = '';
-//     formControl.classList.remove('error');
-// }
+
 const openBtn = document.querySelector(".open-modal-btn");
 const modal = document.querySelector(".modal-overlay");
 const closeBtn = document.querySelector(".close-modal-btn");
