@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h2>Tax Calculator</h2>
+<form id="taxForm">
+    <div class="input-container">
+    <label for="grossIncome">Gross Annual Income:</label>
+    <input type="text" id="grossIncome" name="grossIncome" placeholder="Enter your gross annual income" required>
+    <span class="error-icon" id="grossIncomeError">!</span>
+    <div class="tooltip" id="grossIncomeTooltip">Please enter a valid gross annual income</div>
+</div>
+    <div class="input-container">
+    <label for="extraIncome">Extra Income:</label>
+    <input type="text" id="extraIncome" name="extraIncome" placeholder="Enter any extra income" required>
+    <span class="error-icon" id="extraIncomeError">!</span>
+    <div class="tooltip" id="extraIncomeTooltip">Please enter a valid extra income</div>
+</div>
+<div class="input-container">
+    <label for="ageGroup">Age Group:</label>
+    <select id="ageGroup" name="ageGroup" required>
+    <option value="" disabled selected>Select age group</option>
+    <option value="below40">&lt; 40</option>
+    <option value="40to60">≥ 40 &lt; 60</option>
+    <option value="above60">≥ 60</option>
+    </select>
+    <span class="error-icon" id="ageGroupError">!</span>
+    <div class="tooltip" id="ageGroupTooltip">Please select an age group</div>
+</div>
+<div class="input-container">
+    <label for="deduction">Total Applicable Deduction:</label>
+    <input type="text" id="deduction" name="deduction" placeholder="Enter total applicable deduction" required>
+    <span class="error-icon" id="deductionError">!</span>
+    <div class="tooltip" id="deductionTooltip">Please enter a valid deduction amount</div>
+</div>
+    <button type="submit">Calculate</button>
+    </form>
+</div>
+<div class="modal-overlay hide">
+    <div class="modal-wrapper">
+        <div class="close-btn-wrapper">
+            <button class="close-modal-btn">
+                Close
+            </button>
+        </div>
+        <h4 style="text-align: center;">Your overall income will be</h4>
+        <div class="modal-content">
+          <p style="text-align: center;" id="netamount"></p>
+        </div>
+        <p style="text-align: center;">after all deduction</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
